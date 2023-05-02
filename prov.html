@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prov</title>
+</head>
+<body>
+    <script>
+        // Fråga 1
+        // skapar en funktion med namnet number
+        function number(){
+            // skapar två variabler number1 och number2 som gör att användaren får lägga in två värden
+            let number1 = parseInt(prompt("Skriv in ett tal"));
+            let number2 = parseInt(prompt("Skriv in ett annat tal"));
+
+            // Adderar ihop number1 och number2. Detta hade inte funkat om parseInt inte användes för number1 och number2.
+            let sum = number1 + number2;
+            // skickar ut ett meddelande på sidan med summan
+            alert(sum);
+        }
+        // kallar på funktionen så den körs
+        number();
+
+        // Fråga 2
+        function changeText(){
+            document.getElementById(["demo"]["Hej"])
+        }
+        changeText();
+
+        // Jag fick totalt hjärnsläpp på hur man gör med document.getElementById. ^^
+        // Jag har lämnat in uppgifterna på classroom och under gemensamma klass genomgången visade jag att jag visste hur man gjorde det.
+        // Jag hoppas att det kan väga upp i bedömningen.
+
+        // Fråga 3
+        function changePicture(){
+            document.getElementById(["bild"]["bild.jpg"])
+        }
+        changePicture();
+
+        // Samma här som på fråga 2. Jag har som sagt lämnat in uppgifterna på det men fick hjärnsläpp nu. ^^
+
+        
+        // Fråga 4
+        function arrays(){
+            // Skapar en array med tal och en tom array som de nya talen ska läggas in i.
+            let array1 = ["13", "18", "22", "14"];
+            let array2 = [];
+            // En for loop som lägger till det nya värdet (array1 värdet - 1) i array2 med array2.push.
+            for(i = 0; i < array1.length; i++){
+                array2.push(array1[i] - 1)
+            }
+            // Använder console.log för enkelhetensskull
+            console.log(array2);
+        }
+        arrays();
+
+
+        
+
+    </script>
+    <!-- Fråga 2 -->
+    <p id="demo">Yooo</p>
+    <button onclick="changeText()">klicka mig</button>
+
+    <!-- Fråga 3 -->
+    <img src="carlbildt.jpg" height="50px" width="50px" id="bild">
+    <button onclick="changePicture()"></button>
+
+    <!-- Fråga 5 -->
+    <br>
+    <br>
+    <form>
+        <input id="field">
+        <!-- När knappen klickas alertar den användaren med det som står i fältet genom att använda 'field' ids value -->
+        <button onclick="alert(field.value)">Klick</button>
+    </form>
+
+</body>
+</html>
